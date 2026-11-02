@@ -5,6 +5,7 @@ return {
   ["15:4ea8"] = "Oh, you collect\nPOKéMON? My son\011BILL is an expert.\012He just got called\nto the POKéMON\012CENTRE in ECRUTEAK\nCITY.\012My husband went\noff to the GAME\012CORNER without\nbeing called…{DONE}",
   ["15:56ca"] = "Sometimes, a\nhealthy POKéMON\012may be unable to\nuse its moves.\012If that happens,\nheal it at a POKé-\011MON CENTRE or use\011an item.{DONE}",
   ["15:5a3a"] = "Mum's good at\nbargain hunting.\012She always buys\nstuff at lower\011prices.{DONE}",
+  ["15:5a80"] = "GF SERVICE COUNTER\0121F TRAINER'S\n   MARKET\0122F BATTLE\n   COLLECTION\0123F MEDICINE BOX\0124F TM CORNER\0125F TRANQUIL SQUARE\012ROOFTOP LOOKOUT{DONE}",
   ["15:5cb7"] = "This DEPT.STORE\nmakes me realise\012that GOLDENROD is\na big city.\012The selection here\nis unmatched any-\011where else.{DONE}",
   ["15:5f52"] = "IRON adds to your\nPOKéMON's DEFENCE.{DONE}",
   ["15:6364"] = "Customise Your\nPOKéMON\0125F TM CORNER{DONE}",
@@ -44,7 +45,6 @@ return {
   ["19:6e17"] = "I'm in training\nnow. I apologise,\012but call me back\nanother time.\012Oooooaaarrrgh!{DONE}",
   ["1a:40b2"] = "I fought fair and\nsquare with honour.\012I don't regret\nthis at all.{DONE}",
   ["1a:4f80"] = "Paralysis reduces\nspeed and may\011prevent movement.\012It remains after\nbattle, so use\011a PARLYS HEAL.{DONE}",
-  ["19:5969"] = "Did you know?\nPROF.OAK travelled\012all over the world\nwhen he was young.\012While travelling,\nhe must've learnt\012about POKéMON\nnaturally.\012I envy him…\nI'd like to travel\012and learn about\nthings too…{DONE}",
   ["19:5da6"] = "What's wrong?\012I'm waiting on\n{STRBUF}.\012Come pick this up\nany time.{DONE}",
   ["1a:53fa"] = "She uses the names\nof her favourite\011things to eat.\012For the nicknames\nshe gives to her\011POKéMON, I mean.{DONE}",
   ["1a:5ddd"] = "Excuse me, kid!\nCan you do a guy\011a favour?\012Can you take this\nPOKéMON with MAIL\011to my friend?\012He's on ROUTE 31.{DONE}",
@@ -236,5 +236,7 @@ return {
   ["g3:0818c265"] = "I want my POKéMON to have more\\nendurance.\\pI'm trying to decide whether to raise\\nDEFENCE with IRON, or SP. DEF with ZINC.",
 
   -- attempt at trying to change floor names
-  ["1F"] = "G"
+  ["1F"] = "G",
+  -- Change DEFENSE stat?
+  ["DEFENSE"] = "DEFENCE"
 }
