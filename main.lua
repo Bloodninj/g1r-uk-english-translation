@@ -55,13 +55,13 @@ return function(mod)
   -- Register the sheet BEFORE anything asks for a glyph on it.  base is
   -- the first code the page owns; 0x100 and up is free space above the
   -- vanilla pages, so a new alphabet never collides with them.
-  for id, page in pairs(catalog("font")) do
-    mod.content.font:register(id, page)
-  end
-  -- charmap: which byte sequence draws which code
-  for seq, code in pairs(catalog("charmap")) do
-    mod.content.font:register("charmap:" .. seq, { seq = seq, code = code })
-  end
+--   for id, page in pairs(catalog("font")) do
+--     mod.content.font:register(id, page)
+--   end
+--   -- charmap: which byte sequence draws which code
+--   for seq, code in pairs(catalog("charmap")) do
+--     mod.content.font:register("charmap:" .. seq, { seq = seq, code = code })
+--   end
 
   -- ---- text ---------------------------------------------------------
   local counts = {}
