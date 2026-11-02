@@ -12,8 +12,8 @@
   "optional_dependencies": [],
   "conflicts": [],
   "incompatible": [],
-  "games": ["gen2", "gen3"],
+  "games": ["crystal"],
   "permissions": ["engine_internals"],
   "experimental": false,
-  "description": "Translates the Gen 2 games into English as used in the United Kingdom."
+  "description": "Translates Crystal into English as used in the United Kingdom."
 }
