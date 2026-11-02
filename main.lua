@@ -94,23 +94,43 @@ return function(mod)
 
   -- Item descriptions
   if gameGen == 2 then
+    mod.log:info("translating gen 2 rom_text")
+      counts.items = each("rom_text_gen2", function(id, value)
+      local ok, err = mod.content.rom_text:override(id, value)
+      if not ok then mod.log:error("English (UK): %s", err) end
+    end)
+    mod.log:info("translating gen 2 Pokédex entries")
+      counts.items = each("pokedex_gen2", function(id, value)
+      local ok, err = mod.content.pokemon:patch(id, value)
+      if not ok then mod.log:error("English (UK): %s", err) end
+    end)
     mod.log:info("translating gen 2 item descriptions")
     counts.items = each("item_descriptions_gen2", function(id, value)
-      ok, error = mod.content.items:patch(id, { description = value })
-      if not ok then mod.log:error("English (UK): %s", warn) end
+      local ok, err = mod.content.items:patch(id, { description = value })
+      if not ok then mod.log:error("English (UK): %s", err) end
+    end)
+    mod.log:info("translating gen 2 moves names")
+    counts.items = each("move_names_gen2", function(id, value)
+      local ok, err = mod.content.moves:patch(id, { name = value })
+      if not ok then mod.log:error("English (UK): %s", err) end
+    end)
+    mod.log:info("translating gen 2 move descriptions")
+      counts.items = each("move_descriptions_gen2", function(id, value)
+      local ok, err = mod.content.moves:patch(id, { description = value })
+      if not ok then mod.log:error("English (UK): %s", err) end
     end)
   elseif gameGen == 3 then
     if gameVer == "ruby" or gameVer == "sapphire" or gameVer == "emerald" then
       mod.log:info("translating RSE item descriptions")
       counts.items = each("item_descriptions_rse", function(id, value)
-        ok, error = mod.content.items:patch(id, { description = value })
-        if not ok then mod.log:error("English (UK): %s", warn) end
+        local ok, err = mod.content.items:patch(id, { description = value })
+        if not ok then mod.log:error("English (UK): %s", err) end
       end)
     elseif gameVer == "firered" or gameVer == "leafgreen" then
       mod.log:info("translating FRLG item descriptions")
       counts.items = each("item_descriptions_frlg", function(id, value)
-        ok, error = mod.content.items:patch(id, { description = value })
-        if not ok then mod.log:error("English (UK): %s", error) end
+        local ok, err = mod.content.items:patch(id, { description = value })
+        if not ok then mod.log:error("English (UK): %s", err) end
       end)
     end
   end
