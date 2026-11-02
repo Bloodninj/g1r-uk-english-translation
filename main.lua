@@ -115,6 +115,16 @@ return function(mod)
     end
   end
 
+-- TODO: Find out how to change floor names to match UK standard
+-- mod.log:info("patching floor names")
+-- -- attempt to change floor names
+-- local ok, err = mod.events:patch("floorNames", {
+--   ["1F"] = "G"
+-- })
+-- if not ok then
+--   mod.log:error("Error patching floorNames: %s", err)
+-- end
+
 
   -- counts.trainers = each("trainer_names", function(id, value)
   --   mod.content.trainers:patch(id, { name = value })
