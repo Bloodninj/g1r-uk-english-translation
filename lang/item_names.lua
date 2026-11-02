@@ -1,0 +1,10 @@
+return {
+    ["EON_MAIL"] = "AEON MAIL",
+    ["ELIXER"] = "ELIXIR",
+    ["MAX_ELIXER"] = "MAX ELIXIR",
+    ["PARLYZ_HEAL"] = "PARLYS HEAL",
+    ["PRZCUREBERRY"] = "PRLCUREBERRY",
+    ["SODA_POP"] = "COLA CAN",
+    ["HARBOR_MAIL"] = "HARBOUR MAIL",
+    ["EON_TICKET"] = "AEON TICKET"
+}

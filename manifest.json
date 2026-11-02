@@ -1,0 +1,19 @@
+{
+  "id": "english_uk_translation",
+  "name": "english_uk_translation",
+  "version": "0.1.0",
+  "api": 3,
+  "entry": "main.lua",
+  "profile": "content",
+  "game_version": ">=0.0.0-dev <1.0.0",
+  "category": "LANGUAGE",
+  "priority": 100,
+  "dependencies": [],
+  "optional_dependencies": [],
+  "conflicts": [],
+  "incompatible": [],
+  "games": ["gen2", "gen3"],
+  "permissions": ["engine_internals"],
+  "experimental": false,
+  "description": "Translates the Gen 2 games into English as used in the United Kingdom."
+}
