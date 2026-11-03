@@ -15,5 +15,6 @@
   "games": ["crystal"],
   "permissions": ["engine_internals"],
   "experimental": false,
-  "description": "Translates Crystal into English as used in the United Kingdom."
+  "description": "Translates Crystal into English as used in the United Kingdom.",
+  "github": "Bloodninj/g1r-uk-english-translation"
 }
