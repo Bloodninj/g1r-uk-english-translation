@@ -74,9 +74,7 @@ return function(mod)
     gameVer = GameVersion.get()
   end
 
-  counts.dialogue = each("text", function(id, value)
-    mod.content.text:override(id, value)
-  end)
+
   -- counts.strings = each("strings", function(source, value)
   --   mod.content.strings:override(source, value)
   -- end)
@@ -94,6 +92,11 @@ return function(mod)
 
   -- Item descriptions
   if gameGen == 2 then
+    mod.log:info("translating gen 2 main text")
+    counts.dialogue = each("text_gen2", function(id, value)
+      local ok, err = mod.content.text:override(id, value)
+      if not ok then mod.log:error("English (UK): %s", err) end
+    end)
     mod.log:info("translating gen 2 rom_text")
       counts.items = each("rom_text_gen2", function(id, value)
       local ok, err = mod.content.rom_text:override(id, value)
