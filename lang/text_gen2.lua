@@ -228,7 +228,7 @@ return {
   ["44:4d71"] = "There are odd pat-\nterns drawn on the\012walls of the\nRUINS.\012They must be the\nkeys for unravell-\011ing the mystery\011of the RUINS.{DONE}",
 
   -- Gold specific
-  ["60:43f7"] = "ELM: {PLAYER}!\nThere's the bugger!\012I needed to ask\nyou a favour.\012I have an acquain-\ntance called MR.\011POKéMON.\012He keeps finding\nweird things and\012raving about his\ndiscoveries.\012Anyway, I just got\nan e-mail from him\012saying that this\ntime it's real.\012It is intriguing,\nbut we're busy\012with our POKéMON\nresearch.\012Could you look\ninto it for us?\012I'll give you a\nPOKéMON for a\011partner.\012They're all rare\nPOKéMON that we\011just found.\012Go on. Pick one!{DONE}",
+  ["60:43f7"] = "ELM: {PLAYER}!\nThere you are!\012I needed to ask\nyou a favour.\012I have an acquain-\ntance called MR.\011POKéMON.\012He keeps finding\nweird things and\012raving about his\ndiscoveries.\012Anyway, I just got\nan e-mail from him\012saying that this\ntime it's real.\012It is intriguing,\nbut we're busy\012with our POKéMON\nresearch.\012Could you look\ninto it for us?\012I'll give you a\nPOKéMON for a\011partner.\012They're all rare\nPOKéMON that we\011just found.\012Go on. Pick one!{DONE}",
 
   -- Sapphire
   ["g3:0818c089"] = "GF: SERVICE COUNTER\\n    LOTTERY CORNER\\p1F: TRAINER'S ZONE\\p2F: BATTLE COLLECTION\\p3F: TM CORNER\\p4F: POKé DOLL FLOOR\\ROOFTOP: ROOFTOP PLAZA",
