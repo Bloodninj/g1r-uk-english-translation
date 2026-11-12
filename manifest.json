@@ -1,7 +1,7 @@
 {
   "id": "english_uk_translation",
   "name": "english_uk_translation",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "api": 3,
   "entry": "main.lua",
   "profile": "content",
@@ -12,9 +12,9 @@
   "optional_dependencies": [],
   "conflicts": [],
   "incompatible": [],
-  "games": ["crystal"],
+  "games": ["gen2"],
   "permissions": ["engine_internals"],
   "experimental": false,
-  "description": "Translates Crystal into English as used in the United Kingdom.",
+  "description": "Translates Gen 2 games into English as used in the United Kingdom.",
   "github": "Bloodninj/g1r-uk-english-translation"
 }
