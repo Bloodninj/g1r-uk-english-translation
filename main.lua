@@ -32,7 +32,7 @@ return function(mod)
   local function each(name, apply)
     local n = 0
     for key, value in pairs(catalog(name)) do
-      if type(value) == "string" and value ~= "" then
+      if (type(value) == "string" and value ~= "") or (type(value) == "table" and value ~= nil) then
         apply(key, value)
         n = n + 1
       end
@@ -73,6 +73,7 @@ return function(mod)
     gameGen = GameVersion.generation()
     gameVer = GameVersion.get()
   end
+  mod.log:info("Game is %s, gen %d", gameVer, gameGen)
 
 
   -- counts.strings = each("strings", function(source, value)
@@ -86,42 +87,73 @@ return function(mod)
   -- end)
 
   -- Item names
-  counts.items = each("item_names", function(id, value)
+  counts.item_names = each("item_names", function(id, value)
     mod.content.items:patch(id, { name = value })
   end)
+  mod.log:info("Changed %d item names", counts.item_names)
 
   -- Item descriptions
   if gameGen == 2 then
-    mod.log:info("translating gen 2 main text")
+    mod.log:info("translating gen 2 dialogue")
     counts.dialogue = each("text_gen2", function(id, value)
       local ok, err = mod.content.text:override(id, value)
       if not ok then mod.log:error("English (UK): %s", err) end
     end)
+    mod.log:info("Changed %d dialogue entries", counts.dialogue)
+
     mod.log:info("translating gen 2 rom_text")
-      counts.items = each("rom_text_gen2", function(id, value)
+    counts.rom_text = each("rom_text_gen2", function(id, value)
       local ok, err = mod.content.rom_text:override(id, value)
       if not ok then mod.log:error("English (UK): %s", err) end
     end)
-    mod.log:info("translating gen 2 Pokédex entries")
-      counts.items = each("pokedex_gen2", function(id, value)
-      local ok, err = mod.content.pokemon:patch(id, value)
-      if not ok then mod.log:error("English (UK): %s", err) end
-    end)
+    mod.log:info("Changed %d rom_text entries", counts.rom_text)
+
+    -- load game-specific Pokedex entries
+    if gameVer == "gold" then
+      mod.log:info("translating Gold Pokédex entries")
+      counts.dex_gold = each("pokedex_gen2_gold", function(id, value)
+        local ok, err = mod.content.pokemon:patch(id, value)
+        if not ok then mod.log:error("English (UK): %s", err) end
+      end)
+      mod.log:info("Changed %d Gold dex entries", counts.dex_gold)
+    elseif gameVer == "silver" then
+      mod.log:info("translating Silver Pokédex entries")
+      counts.dex_silver = each("pokedex_gen2_silver", function(id, value)
+        local ok, err = mod.content.pokemon:patch(id, value)
+        if not ok then mod.log:error("English (UK): %s", err) end
+      end)
+      mod.log:info("Changed %d Silver dex entries", counts.dex_silver)
+    elseif gameVer == "crystal" then
+      mod.log:info("translating Crystal Pokédex entries")
+      -- local ok, err = mod.content.pokemon:patch("SHUCKLE", { dexEntry = {kind = "MOULD" }})
+      -- if not ok then mod.log:error("English (UK): %s", err) end
+      counts.dex_crystal = each("pokedex_gen2_crystal", function(id, value)
+        local ok, err = mod.content.pokemon:patch(id, { dexEntry = value })
+        if not ok then mod.log:error("English (UK): %s", err) end
+      end)
+      mod.log:info("Changed %d Crystal dex entries", counts.dex_crystal)
+    end
+
     mod.log:info("translating gen 2 item descriptions")
-    counts.items = each("item_descriptions_gen2", function(id, value)
+    counts.item_descriptions = each("item_descriptions_gen2", function(id, value)
       local ok, err = mod.content.items:patch(id, { description = value })
       if not ok then mod.log:error("English (UK): %s", err) end
     end)
+    mod.log:info("Changed %d item descriptions", counts.item_descriptions)
+
     mod.log:info("translating gen 2 moves names")
-    counts.items = each("move_names_gen2", function(id, value)
+    counts.move_names = each("move_names_gen2", function(id, value)
       local ok, err = mod.content.moves:patch(id, { name = value })
       if not ok then mod.log:error("English (UK): %s", err) end
     end)
+    mod.log:info("Changed %d move names", counts.move_names)
+
     mod.log:info("translating gen 2 move descriptions")
-      counts.items = each("move_descriptions_gen2", function(id, value)
+      counts.move_descriptions = each("move_descriptions_gen2", function(id, value)
       local ok, err = mod.content.moves:patch(id, { description = value })
       if not ok then mod.log:error("English (UK): %s", err) end
     end)
+    mod.log:info("Changed %d move descriptions", counts.move_descriptions)
   elseif gameGen == 3 then
     if gameVer == "ruby" or gameVer == "sapphire" or gameVer == "emerald" then
       mod.log:info("translating RSE item descriptions")
