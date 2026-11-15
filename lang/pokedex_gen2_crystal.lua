@@ -18,8 +18,7 @@ return {
         text2 = "offence as soon as<NEXT>it notices an<NEXT>attacker."
     },
     ["SHUCKLE"] = {
-        kind = "MOULD",
-        text = "What the fuck<NEXT>did you just fuck-<NEXT>ing say about me…"
+        kind = "MOULD"
     },
     ["SKARMORY"] = {
         kind = "ARMOUR BIRD"
