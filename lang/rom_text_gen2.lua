@@ -23,5 +23,5 @@ return {
     ["_TeleportReturnText"] = "Return to the last\nPOKéMON CENTRE.{DONE}",
     ["_WhitedOutText"] = "{PLAYER} is out of\nusable POKéMON!\012{PLAYER} whited\nout!{DONE}",
     ["WasBurnedText"] = "{TARGET}\nwas burnt!{PROMPT}",
-    ["_Defense"] = "DEFENCE"
+    ["Defense"] = "DEFENCE"
 }
