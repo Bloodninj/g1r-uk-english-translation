@@ -1,7 +1,7 @@
 {
   "id": "english_uk_translation",
   "name": "English (UK) Translation",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "api": 3,
   "entry": "main.lua",
   "profile": "content",
