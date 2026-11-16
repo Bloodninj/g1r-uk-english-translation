@@ -18,7 +18,7 @@ return {
     ["PokecenterSignText"] = "Heal Your POKéMON!\nPOKéMON CENTRE{DONE}",
     ["PrintPartyMenuActionText.RevitalizedText"] = "{STRBUF}\nis revitalised.{DONE}",
     ["PrintParty_StatsString"] = "ATTACK\nDEFENCE\nSPCL.ATK\nSPCL.DEF\nSPEED",
-    ["PrintTempMonStats.StatNames"] = "ATTACK\nDEFENSE\nSPCL.ATK\nSPCL.DEF\nSPEED\n",
+    ["PrintTempMonStats.StatNames"] = "ATTACK\nDEFENCE\nSPCL.ATK\nSPCL.DEF\nSPEED\n",
     ["ReflectEffectText"] = "{USER}'s\nDEFENCE rose!{PROMPT}",
     ["SentAllToMomText"] = "Sent all to MUM!{PROMPT}",
     ["SentHalfToMomText"] = "Sent half to MUM!{PROMPT}",
